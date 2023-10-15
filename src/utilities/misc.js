@@ -10,3 +10,5 @@ export const navLinks = [
         url: '/about'
     }
 ]
+
+export const parts_url = "https//gem-cars-web.netlify/api/property"
