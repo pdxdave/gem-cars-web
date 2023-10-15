@@ -13,7 +13,6 @@ function App() {
         <Route exact path="/parts" element={<Parts />}/>
         <Route path="/about" element={<About />}/>
       </Routes>
-      
     </BrowserRouter>
   );
 }
