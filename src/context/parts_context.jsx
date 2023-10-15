@@ -1,12 +1,14 @@
-import axios from 'axios'
 import React, {useContext, useEffect, useReducer} from 'react'
+import {parts_url as url} from '../utilities/misc'
+import axios from 'axios'
 import {
     GET_PARTS_BEGIN,
     GET_PARTS_SUCCESS,
     GET_PARTS_ERROR
 } from '../actions'
+
 import reducer from '../reducers/parts_reducer'
-import {parts_url as url} from '../utilities/misc'
+
 
 const initialState = {
     parts_loading: false,
@@ -23,7 +25,7 @@ export const PartsProvider = ({children}) => {
     const fetchParts = async (url) => {
         dispatch({ type: GET_PARTS_BEGIN })
         try {
-            const response = await axios.get(url)
+            const response = await axios(url)
             const parts = response.data
             console.log(parts)
             dispatch({ type: GET_PARTS_SUCCESS, payload: parts})
