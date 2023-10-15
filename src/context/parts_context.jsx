@@ -4,7 +4,7 @@ import axios from 'axios'
 import {
     GET_PARTS_BEGIN,
     GET_PARTS_SUCCESS,
-    GET_PARTS_ERROR
+    GET_PARTS_ERROR,
 } from '../actions'
 
 import reducer from '../reducers/parts_reducer'
