@@ -1,2 +1,5 @@
 export const MOBILE_OPEN = 'MOBILE_OPEN'
 export const MOBILE_CLOSE = 'MOBILE_CLOSE'
+export const GET_PARTS_BEGIN = "GET_PARTS_BEGIN"
+export const GET_PARTS_SUCCESS = "GET_PARTS_SUCCESS"
+export const GET_PARTS_ERROR = "GET_PARTS_ERROR"
