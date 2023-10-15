@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {Navbar, MobileNav} from './components'
 
-import {Home, About} from './pages'
+import {Home, About, Parts} from './pages'
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <MobileNav />
       <Routes>
         <Route exact path="/" element={<Home />}/>
+        <Route exact path="/parts" element={<Parts />}/>
         <Route path="/about" element={<About />}/>
       </Routes>
       
