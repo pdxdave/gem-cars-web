@@ -56,7 +56,7 @@ const filter_reducer = (state, action) => {
     // FILTER PRODUCTS
     if(action.type === FILTER_PARTS){
         const {all_parts} = state 
-        const {price, mfg} = state.filters
+        const {price, mfg, part_type} = state.filters
         // fresh copy of the state
         let tempParts = [...all_parts]
 
@@ -64,6 +64,11 @@ const filter_reducer = (state, action) => {
         if(mfg !== 'all'){
             tempParts = 
             tempParts.filter((banana) => banana.mfg === mfg)
+        }
+
+        if(part_type !== 'all'){
+            tempParts = 
+            tempParts.filter((banana) => banana.part_type = part_type)
         }
 
         // price 
