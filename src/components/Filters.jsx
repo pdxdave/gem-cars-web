@@ -1,9 +1,15 @@
-
+import styled from 'styled-components'
 
 const Filters = () => {
   return (
-    <div>Filters</div>
+    <Wrapper>
+        <div>Filters</div>
+    </Wrapper>
   )
 }
 
+const Wrapper = styled.section `
+    
+
+`
 export default Filters

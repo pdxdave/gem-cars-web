@@ -2,8 +2,15 @@ import styled from "styled-components"
 
 const Part = () => {
   return (
-    <div>Part</div>
+    <Wrapper>
+        <div>Part</div>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.article `
+    
+
+`
 
 export default Part
