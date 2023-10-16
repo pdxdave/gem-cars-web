@@ -68,7 +68,7 @@ const filter_reducer = (state, action) => {
 
         if(part_type !== 'all'){
             tempParts = 
-            tempParts.filter((banana) => banana.part_type = part_type)
+            tempParts.filter((banana) => banana.part_type === part_type)
         }
 
         // price 
