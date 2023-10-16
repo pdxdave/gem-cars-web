@@ -42,7 +42,7 @@ const filter_reducer = (state, action) => {
             tempParts = tempParts.sort((a,b) => a.price - b.price)
         }
         if(sort === 'price-highest'){
-            tempParts = tempParts.sort((a, b) => a.price - b.price)
+            tempParts = tempParts.sort((a, b) => b.price - a.price)
         }
     }
 
@@ -55,7 +55,7 @@ const filter_reducer = (state, action) => {
     // FILTER PRODUCTS
     if(action.type === FILTER_PARTS){
         const {all_parts} = state 
-        const {price, name, mfg} = state.filters
+        const {price, mfg} = state.filters
         // fresh copy of the state
         let tempParts = [...all_parts]
 
