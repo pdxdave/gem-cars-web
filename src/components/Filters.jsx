@@ -9,6 +9,7 @@ const Filters = () => {
     filters: {
       min_price,
       max_price,
+      price,
       mfg,
       part_type
     },
