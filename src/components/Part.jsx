@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { formatPrice } from '../utilities/helper'
+import { Link } from "react-router-dom"
 
 const Part = ({url, price}) => {
   return (
@@ -8,6 +9,10 @@ const Part = ({url, price}) => {
         <header className="parts-header">
           <p className="part-price">{formatPrice(price)}</p>
         </header>
+
+        <Link>
+          <button className="btn">more info</button>
+        </Link>
     </Wrapper>
   )
 }
@@ -29,6 +34,18 @@ const Wrapper = styled.article `
     text-transform: capitalize;
   }
 
+  .btn {
+    width: 100%;
+    font-family: inherit;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    border: none;
+    padding: .25em 0;
+    margin-top: .25em;
+    background: #5D668D;
+    color: #fff;
+    cursor: pointer;
+  }
 `
 
 export default Part
