@@ -2,12 +2,13 @@ import styled from "styled-components"
 import { formatPrice } from '../utilities/helper'
 import { Link } from "react-router-dom"
 
-const Part = ({url, price}) => {
+const Part = ({url, price, name}) => {
   return (
     <Wrapper>
         <img src={url} alt="location" />
         <header className="parts-header">
           <p className="part-price">{formatPrice(price)}</p>
+          <p className='part-tagline'>{name}</p>
         </header>
 
         <Link>
@@ -45,6 +46,10 @@ const Wrapper = styled.article `
     background: #5D668D;
     color: #fff;
     cursor: pointer;
+  }
+
+  .part-tagline {
+    font-weight: bold;
   }
 `
 
