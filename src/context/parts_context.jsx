@@ -25,7 +25,7 @@ export const PartsProvider = ({children}) => {
     const fetchParts = async (url) => {
         dispatch({ type: GET_PARTS_BEGIN })
         try {
-            const response = await axios(url)
+            const response = await axios.get(url)
             const parts = response.data
             
             dispatch({ type: GET_PARTS_SUCCESS, payload: parts})
