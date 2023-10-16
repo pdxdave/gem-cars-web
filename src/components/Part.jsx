@@ -11,7 +11,7 @@ const Part = ({url, price, name}) => {
           <p className='part-tagline'>{name}</p>
         </header>
 
-        <Link>
+        <Link to={`/parts/${id}`}>
           <button className="btn">more info</button>
         </Link>
     </Wrapper>
