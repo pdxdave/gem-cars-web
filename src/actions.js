@@ -6,6 +6,7 @@ export const GET_PARTS_ERROR = "GET_PARTS_ERROR"
 
 export const LOAD_PARTS = "LOAD_PARTS"
 export const UPDATE_SORT = "UPDATE_SORT"
+export const UPDATE_FILTERS = "UPDATE_FILTERS"
 export const SORT_PARTS = "SORT_PARTS"
 export const FILTER_PARTS = "FILTER_PARTS"
 export const CLEAR_FILTERS = "CLEAR_FILTERs"
