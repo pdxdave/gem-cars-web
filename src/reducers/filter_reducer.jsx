@@ -44,6 +44,7 @@ const filter_reducer = (state, action) => {
         if(sort === 'price-highest'){
             tempParts = tempParts.sort((a, b) => b.price - a.price)
         }
+        return {...state, filtered_parts: tempParts}
     }
 
     // UPDATE FILTERS
