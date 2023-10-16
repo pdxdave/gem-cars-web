@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { formatPrice } from '../utilities/helper'
 import { Link } from "react-router-dom"
 
-const Part = ({url, price, name}) => {
+const Part = ({url, price, name, id}) => {
   return (
     <Wrapper>
         <img src={url} alt="location" />

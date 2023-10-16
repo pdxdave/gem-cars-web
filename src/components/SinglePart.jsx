@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { usePartsContext } from '../context/parts_context';
