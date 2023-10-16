@@ -1,9 +1,13 @@
 import styled from "styled-components"
+import { formatPrice } from '../utilities/helper'
 
-const Part = ({url}) => {
+const Part = ({url, price}) => {
   return (
     <Wrapper>
         <img src={url} alt="location" />
+        <header className="parts-header">
+          <p className="part-price">{formatPrice(price)}</p>
+        </header>
     </Wrapper>
   )
 }
@@ -18,6 +22,11 @@ const Wrapper = styled.article `
     object-fit: fill;
     padding: 0px;
     margin: 0px;
+  }
+
+  .parts-header > p {
+    margin: 0px;
+    text-transform: capitalize;
   }
 
 `
