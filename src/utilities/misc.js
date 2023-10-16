@@ -12,3 +12,4 @@ export const navLinks = [
 ]
 
 export const parts_url = "https://gem-cars-api.netlify.app/api/parts"
+export const single_part_url = `https://gem-cars-api.netlify.app/api/single-part?id`
