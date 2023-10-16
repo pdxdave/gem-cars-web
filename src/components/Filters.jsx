@@ -29,10 +29,10 @@ const Filters = () => {
             <form onSubmit={(e) => e.preventDefault()}>
 
 
-              {/* manufacturer */}
+              {/* brand */}
               <div className="form-settings">
               <h5>Brand</h5>
-                <div className="agents">
+                <div className="brand">
                   {mfgs.map((mf, index) => {
                     return <button
                         key={index}
@@ -40,13 +40,11 @@ const Filters = () => {
                         name="mfg"
                         type="button"
                         className={`${mfg === mf.toLowerCase() ? 'active' : null}`}
-                      >
-                        {mf}
-                    </button>
+                      >{mf}</button>
                   })}
                 </div>
               </div>
-            {/* end of part type */}
+            {/* end of brand */}
 
             {/* part types */}
             <div className='form-settings'>
@@ -94,7 +92,7 @@ const Wrapper = styled.section `
     margin-bottom: 1.3em;
   }
 
-  .agents {
+  .brand {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: .5em;
