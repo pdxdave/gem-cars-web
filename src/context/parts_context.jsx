@@ -5,6 +5,9 @@ import {
     GET_PARTS_BEGIN,
     GET_PARTS_SUCCESS,
     GET_PARTS_ERROR,
+    GET_SINGLE_PART_BEGIN,
+    GET_SINGLE_PART_SUCCESS,
+    GET_SINGLE_PART_ERROR
 } from '../actions'
 
 import reducer from '../reducers/parts_reducer'
@@ -14,6 +17,10 @@ const initialState = {
     parts_loading: false,
     parts_error: false,
     parts: [],
+
+    single_part_loading: false,
+    single_part_error: false,
+    single_property: []
 }
 
 const PartsContext = React.createContext()
@@ -38,9 +45,23 @@ export const PartsProvider = ({children}) => {
         fetchParts(url)
     }, [])
 
+
+    // GET SINGLE PART
+    const fetchSinglePart = async (url) => {
+        dispatch({ type: GET_SINGLE_PART_BEGIN})
+        try {
+            const response = await axios.get(url)
+            const singlePart = response.data
+            dispatch({ type: GET_SINGLE_PART_SUCCESS, payload: singlePart})
+        } catch (error) {
+            dispatch({ type: GET_SINGLE_PART_ERROR})
+        }
+    }
+
     return (
         <PartsContext.Provider value={{
-            ...state
+            ...state,
+            fetchSinglePart
         }}>
             {children}
         </PartsContext.Provider>
