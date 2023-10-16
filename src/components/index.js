@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import Part from "./Part";
 import PartsList from "./PartsList";
 import Filters from './Filters'
-import SinglePart from "./SinglePart";
 import ProcessImages from "./processImages";
 import Error from "./Error"
 import Loading from './Loading'
@@ -14,7 +13,6 @@ export {
     Part,
     PartsList,
     Filters,
-    SinglePart,
     ProcessImages,
     Error,
     Loading
