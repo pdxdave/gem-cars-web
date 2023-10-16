@@ -6,6 +6,7 @@ import Filters from './Filters'
 import SinglePart from "./SinglePart";
 import ProcessImages from "./processImages";
 import Error from "./Error"
+import Loading from './Loading'
 
 export {
     MobileNav,
@@ -15,5 +16,6 @@ export {
     Filters,
     SinglePart,
     ProcessImages,
-    Error
+    Error,
+    Loading
 }
