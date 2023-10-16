@@ -27,7 +27,7 @@ export const PartsProvider = ({children}) => {
         try {
             const response = await axios(url)
             const parts = response.data
-            console.log(parts)
+            
             dispatch({ type: GET_PARTS_SUCCESS, payload: parts})
         } catch (error) {
             dispatch({ type: GET_PARTS_ERROR})
