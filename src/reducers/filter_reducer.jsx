@@ -88,7 +88,8 @@ const filter_reducer = (state, action) => {
             filters: {
                 ...state.filters,
                 price: state.filters.max_price,
-                mfg: 'all'
+                mfg: 'all',
+                part_type: 'all'
             }
         }
     }
