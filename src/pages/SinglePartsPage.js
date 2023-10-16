@@ -36,7 +36,7 @@ const SinglePartsPage = () => {
 
 
   const {
-    images,
+    // images,
     name,
     price,
     part_type
