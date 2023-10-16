@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Sort from './Sort'
 import { useFilterContext } from '../context/filter_context'
+import { getUniqueValues } from '../utilities/helper'
 
 const Filters = () => {
 
