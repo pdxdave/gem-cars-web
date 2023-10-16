@@ -39,7 +39,7 @@ const filter_reducer = (state, action) => {
         // if nothing is sorted
         let tempParts = [...filtered_parts]
         if(sort === 'price-lowest'){
-            tempParts = tempParts.sort((a,b) => a.price - b.price)
+            tempParts = tempParts.sort((a, b) => a.price - b.price)
         }
         if(sort === 'price-highest'){
             tempParts = tempParts.sort((a, b) => b.price - a.price)
