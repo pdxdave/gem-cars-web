@@ -5,7 +5,7 @@ const PartsPage = () => {
   return (
     <main>
       <Wrapper className="page-setting">
-        <div className="properties">
+        <div className="parts">
           <Filters />
           <div>
             <PartsList />
@@ -17,13 +17,13 @@ const PartsPage = () => {
 }
 
 const Wrapper = styled.div `
-  .properties {
+  .parts {
     display: grid;
     gap: 3rem 1.5rem;
     margin: 4rem auto;
   }
   @media (min-width: 768px){
-    .properties {
+    .parts {
       grid-template-columns: 200px 1fr;
     }
   }
