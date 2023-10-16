@@ -1,15 +1,16 @@
 import styled from "styled-components"
 
-const Part = () => {
+const Part = ({url}) => {
   return (
     <Wrapper>
-        <div>Part</div>
+        <img src={url} alt="location" />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.article `
-    
+    width: 400px;
+    max-width: 100%;
 
 `
 
