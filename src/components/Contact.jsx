@@ -7,7 +7,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = ({closeModal, name}) => {
   const [state, handleSubmit] = useForm("xnqyanzz");
-  const [dis, setDis] = useState(true)
+ 
 
   const funky = (e) => {
     e.preventDefault()
