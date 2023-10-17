@@ -20,7 +20,7 @@ const initialState = {
 
     single_part_loading: false,
     single_part_error: false,
-    single_property: []
+    single_part: []
 }
 
 const PartsContext = React.createContext()
