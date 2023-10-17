@@ -38,7 +38,8 @@ const SinglePartsPage = () => {
     images,
     name,
     price,
-    part_type
+    part_type,
+    desc
   } = part
 
   return (
@@ -47,9 +48,10 @@ const SinglePartsPage = () => {
         <div className="part-divider">
           <ProcessImages images={images} />
           <div className="part-specs">
-            <h4>{name}</h4>
+            <h4><span>{name}</span></h4>
+            <p><span>{part_type}</span></p>
+            <p>{desc}</p>
             <p>{formatPrice(price)}</p>
-            <p>{part_type}</p>
           </div>
         </div>
       </div>
@@ -69,6 +71,9 @@ const Wrapper = styled.main `
     color: var(--clr-grey-600);
   }
 
+  span {
+  color: var(--clr-grey-900);
+}
   @media (min-width: 900px){
   .part-divider {
     grid-template-columns: 1fr 1fr;
