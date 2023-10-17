@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { usePartsContext } from '../context/parts_context';
 import { single_part_url as url } from '../utilities/misc';
-import {ProcessImages} from '../components'
+import {ProcessImages, Contact} from '../components'
 import { formatPrice } from '../utilities/helper';
 import {
   Loading, 
