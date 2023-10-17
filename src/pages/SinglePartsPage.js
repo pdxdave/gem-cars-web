@@ -56,10 +56,11 @@ const SinglePartsPage = () => {
               <p>{desc}</p>
               <p>{formatPrice(price)}</p>
             </div>
+            <div>
+              <button className='btn-interested' onClick={() => setOpenModal(true)}>I'm Interested!</button>
+            </div>
           </div>
-          <div>
-           <button className='btn-interested' onClick={() => setOpenModal(true)}>I'm Interested!</button>
-        </div>
+          
         </div>
       </Wrapper>
     </>
