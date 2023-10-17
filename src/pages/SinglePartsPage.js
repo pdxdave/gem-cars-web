@@ -56,7 +56,7 @@ const SinglePartsPage = () => {
               <p>{desc}</p>
               <p>{formatPrice(price)}</p>
               <div>
-                <button className='btn-interested' onClick={() => setOpenModal(true)}>I'm Interested!</button>
+                <button className='btn-interested' onClick={() => setOpenModal(true)}>Contact</button>
               </div>
             </div>  
           </div>
@@ -84,9 +84,9 @@ const Wrapper = styled.main `
 
 
   .btn-interested {
-    background-color: var(--clr-btn);
+    background-color: #5D668D;
     font-family: inherit;
-    color: var(--clr-reg-text);
+    color: var(--clr-slate-200);
     font-size: 1.2rem;
     padding: .15em .4em;
     border: none;
@@ -94,10 +94,6 @@ const Wrapper = styled.main `
     cursor: pointer;
     margin-top: 1em;
     transition: .2s ease-in-out;
-  }
-
-  .btn-interested:hover {
-    background-color: var(--clr-btn-hover);
   }
 
 

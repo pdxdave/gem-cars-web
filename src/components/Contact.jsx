@@ -144,6 +144,7 @@ input[type="name"], input[type="email"], input[type="job"], textarea{
   cursor: pointer;
   margin-top: 1em;
   transition: .2s ease-in-out;
+  border: 1px solid gray;
 }
 
 .btn-submit:hover {
