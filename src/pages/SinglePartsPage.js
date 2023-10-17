@@ -44,7 +44,7 @@ const SinglePartsPage = () => {
   return (
     <Wrapper className="page-setting">
       <div className="test">
-        <div className="property-divider">
+        <div className="part-divider">
           <ProcessImages images={images} />
           <div className="part-specs">
             <h4>{name}</h4>
@@ -59,15 +59,28 @@ const SinglePartsPage = () => {
 
 const Wrapper = styled.main `
   
-  .property-divider {
+  .part-divider {
     display: grid;
     gap: 4rem;
     margin-top: 1em;
   }
 
-  .property-specs {
+  .part-specs {
     color: var(--clr-grey-600);
   }
+
+  @media (min-width: 900px){
+  .part-divider {
+    grid-template-columns: 1fr 1fr;
+    /* border: 1px solid red; */
+    
+  }
+  .test {
+    /* height: calc(100vh - (5em + 13em)); */
+    height: calc(100vh - 5em);
+  }
+
+}
 `
 
 export default SinglePartsPage
