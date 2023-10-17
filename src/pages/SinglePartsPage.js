@@ -55,10 +55,11 @@ const SinglePartsPage = () => {
               <p><span>{part_type}</span></p>
               <p>{desc}</p>
               <p>{formatPrice(price)}</p>
+              <div>
+                <button className='btn-interested' onClick={() => setOpenModal(true)}>I'm Interested!</button>
+              </div>
             </div>
-            <div>
-              <button className='btn-interested' onClick={() => setOpenModal(true)}>I'm Interested!</button>
-            </div>
+            
           </div>
           
         </div>
