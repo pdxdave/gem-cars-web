@@ -5,7 +5,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 
 const Contact = ({closeModal, name}) => {
-  const [state, handleSubmit] = useForm("xnqyanzz");
+  const [state, handleSubmit] = useForm("xqkvwjaa");
  
 
   const funky = (e) => {
@@ -20,7 +20,7 @@ const Contact = ({closeModal, name}) => {
         <div className="modal-container">
           <p className='btn-close' onClick={() => closeModal(false)}>X</p>
           <p className='apply-message'> Thank you for your interest in the <span>{name}</span></p>
-          <form onSubmit={() => funky} action="https://formspree.io/f/xnqyanzz" method="POST" className='form'>
+          <form onSubmit={() => funky} action="https://formspree.io/f/xqkvwjaa" method="POST" className='form'>
               <input
                     id="name"
                     type="name" 
