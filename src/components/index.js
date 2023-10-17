@@ -4,8 +4,9 @@ import Part from "./Part";
 import PartsList from "./PartsList";
 import Filters from './Filters'
 import ProcessImages from "./processImages";
-import Error from "./Error"
-import Loading from './Loading'
+import Error from "./Error";
+import Loading from './Loading';
+import Contact from "./Contact";
 
 export {
     MobileNav,
@@ -15,5 +16,6 @@ export {
     Filters,
     ProcessImages,
     Error,
-    Loading
+    Loading,
+    Contact
 }

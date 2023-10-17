@@ -1,8 +1,8 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { usePartsContext } from '../context/parts_context';
 import { single_part_url as url } from '../utilities/misc';
-import {ProcessImages} from '../components'
+import {ProcessImages, Contact} from '../components'
 import { formatPrice } from '../utilities/helper';
 import {
   Loading, 
@@ -11,6 +11,7 @@ import {
 import styled from 'styled-components';
 
 const SinglePartsPage = () => {
+  const [openModal, setOpenModal] = useState(false)
 
   const {id} = useParams()
 
@@ -43,19 +44,25 @@ const SinglePartsPage = () => {
   } = part
 
   return (
-    <Wrapper className="page-setting">
-      <div className="test">
-        <div className="part-divider">
-          <ProcessImages images={images} />
-          <div className="part-specs">
-            <h4><span>{name}</span></h4>
-            <p><span>{part_type}</span></p>
-            <p>{desc}</p>
-            <p>{formatPrice(price)}</p>
+    <>
+    {openModal && <Contact closeModal={setOpenModal} name={name}/>}
+      <Wrapper className="page-setting">
+        <div className="test">
+          <div className="part-divider">
+            <ProcessImages images={images} />
+            <div className="part-specs">
+              <h4><span>{name}</span></h4>
+              <p><span>{part_type}</span></p>
+              <p>{desc}</p>
+              <p>{formatPrice(price)}</p>
+            </div>
           </div>
+          <div>
+           <button className='btn-interested' onClick={() => setOpenModal(true)}>I'm Interested!</button>
         </div>
-      </div>
-    </Wrapper>
+        </div>
+      </Wrapper>
+    </>
   )
 }
 
@@ -72,8 +79,28 @@ const Wrapper = styled.main `
   }
 
   span {
-  color: var(--clr-grey-900);
-}
+    color: var(--clr-grey-900);
+  }
+
+
+  .btn-interested {
+    background-color: var(--clr-btn);
+    font-family: inherit;
+    color: var(--clr-reg-text);
+    font-size: 1.2rem;
+    padding: .15em .4em;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-top: 1em;
+    transition: .2s ease-in-out;
+  }
+
+  .btn-interested:hover {
+    background-color: var(--clr-btn-hover);
+  }
+
+
   @media (min-width: 900px){
   .part-divider {
     grid-template-columns: 1fr 1fr;
