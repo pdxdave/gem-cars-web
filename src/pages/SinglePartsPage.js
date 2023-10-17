@@ -2,7 +2,7 @@ import {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { usePartsContext } from '../context/parts_context';
 import { single_part_url as url } from '../utilities/misc';
-// import {ProcessImages} from '../components'
+import {ProcessImages} from '../components'
 import { formatPrice } from '../utilities/helper';
 import {
   Loading, 
@@ -35,7 +35,7 @@ const SinglePartsPage = () => {
 
 
   const {
-    // images,
+    images,
     name,
     price,
     part_type
@@ -45,7 +45,7 @@ const SinglePartsPage = () => {
     <Wrapper className="page-setting">
       <div className="test">
         <div className="property-divider">
-          {/* <ProcessImages images={images} /> */}
+          <ProcessImages images={images} />
           <div className="part-specs">
             <h4>{name}</h4>
             <p>{formatPrice(price)}</p>
