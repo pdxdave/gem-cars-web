@@ -58,10 +58,8 @@ const SinglePartsPage = () => {
               <div>
                 <button className='btn-interested' onClick={() => setOpenModal(true)}>I'm Interested!</button>
               </div>
-            </div>
-            
+            </div>  
           </div>
-          
         </div>
       </Wrapper>
     </>
