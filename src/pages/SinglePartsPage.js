@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { usePartsContext } from '../context/parts_context';
@@ -9,7 +8,7 @@ import {
   Loading, 
   Error
 } from '../components'
-
+import styled from 'styled-components';
 
 const SinglePartsPage = () => {
 
